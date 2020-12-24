@@ -1,9 +1,11 @@
 import React from 'react';
-import Image from '../download.png';
-
-
+import {Link} from 'react-router-dom';
+import FadeIn from 'react-fade-in';
+import Image from '../assets/logos/dsclogo.jpg';
 export const itemClick = (e) => {
     console.log("clicked");
+    var a = new Navbar();
+    
   }
   
   export const menuData = [
@@ -11,16 +13,19 @@ export const itemClick = (e) => {
       color: "#F4B400",
       icon: "fa-paper-plane",
       content : "Connect",
+      href:"https://dsc.community.dev/pimpri-chinchwad-college-of-engineering/",
       click: itemClick
     },{
       color: "#DB4437",
       icon: "fa-chart-bar",
       content : 'Projects',
+      href : "/projects",
       click: itemClick
     },{
       color: "#F4B400",
       icon: "fa-users",
       content : 'The Team',
+      href : "/team",
       click: itemClick
     },{
       color: "#0F9D58",
@@ -31,10 +36,11 @@ export const itemClick = (e) => {
       color: "#4285F4",
       icon: "fa-home",
       content : 'Home',
+      href:"/",
       click: itemClick
     },
     {
-      color: "#DB4437",
+      color: "#0F9D58",
       icon: "fa-play-circle",
       content : 'Videos',
       click: itemClick
@@ -71,7 +77,8 @@ class Navbar extends React.Component {
       
       menuConfig.forEach(({
         color,
-        content, 
+        content,
+        href, 
         icon, 
         click
       }) => {
@@ -79,6 +86,7 @@ class Navbar extends React.Component {
           color,
           icon,
           content,
+          href,
           click,
           rotation,
           angle,
@@ -144,16 +152,19 @@ class Navbar extends React.Component {
             size={18}
             items={this.state.menuItems} 
             open={this.state.menuOpen}
+            toggle = {this.toggleMenu}
+            animateButtons = {this.animateButtons}
           />
-        
-          <div className=" pl-3 pt-1 text-secondary" style={{display:"flex", flexDirection:"row"}}>
-            <img src={Image} className="" alt="img" style={{width:"75px", height:"75px"}}/>
+        <Link to="/" style={{textDecoration:"none"}}>
+          <div className=" pl-5 pt-1 text-secondary" style={{display:"flex", flexDirection:"row"}}>
+            <img src={Image} className="mt-2" style={{width:"250px"}} alt="img"/>
           <div className="mx-3 mt-4 ">
-          <h3>DSC PCCOE</h3>
+          
           
           </div>
             
           </div>
+          </Link>
           </div>
       )}
 }
@@ -162,7 +173,8 @@ const Menu = ({
     size, 
     items, 
     toggle, 
-    open
+    open,
+    animateButtons
   }) => (
     <div className={open 
           ? "menu-wrapper-open" 
@@ -173,6 +185,8 @@ const Menu = ({
           size={size}
           items={items} 
           open={open}
+          toggle={toggle}
+          animateButtons={animateButtons}
         />
       </div>
     </div>
@@ -181,7 +195,9 @@ const Menu = ({
   const MenuItems = ({
     size, 
     items, 
-    open
+    open,
+    toggle,
+    animateButtons
   }) => {
     const buttons = items.map((item) => {
       const styling = {
@@ -197,19 +213,25 @@ const Menu = ({
       };
       
       return (
+        <Link to={item.href} style={{textDecoration:"none"}}>
+
         <div 
           className={item.show 
             ? "menu-item item-show" 
             : "menu-item item-hide"}
           style={styling}
-          onClick={item.click}
-        >
+          onClick={()=>{
+            toggle();
+            animateButtons();
+          }}
           
+        >
           <i style={{display:"block"}} className={"fa " + item.icon}
              aria-hidden="true"
           ></i>
           <p  className="text-white content">{item.content}</p>
         </div>
+        </Link>
       );
     });
     
@@ -242,7 +264,7 @@ const Menu = ({
     > <i className={open 
            ? "fa fa-times"
            : "fa fa-bars"}
-         aria-hidden="true"
+         
       ></i>
     </button>
   );

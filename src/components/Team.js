@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/style.css';
+import '../css/style.css';
 function Team() {
     return (
         <div className="">

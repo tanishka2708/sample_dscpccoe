@@ -10,6 +10,8 @@ import Team from './components/Team';
 import Home from './components/Home';
 import Blog from './components/main';
 import Projects from './components/Projects';
+import Events from './components/Events';
+
 function App() {
   return(
     <div >
@@ -19,7 +21,7 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/team" component={Team} />
       <Route exact path="/projects" component={Blog}/>
-      
+      <Route exact path="/events" component = {Events}/>
       </Switch>
       
     </div>

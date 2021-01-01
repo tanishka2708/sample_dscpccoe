@@ -31,6 +31,7 @@ export const itemClick = (e) => {
       color: "#0F9D58",
       icon: "fa-tags",
       content : 'Events',
+      href : '/events',
       click: itemClick
     },{
       color: "#4285F4",

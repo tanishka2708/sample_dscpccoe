@@ -9,6 +9,7 @@ import About from './components/AboutUs';
 import Team from './components/Team';
 import Home from './components/Home';
 import Blog from './components/main';
+import Footer from './components/Footer';
 import Projects from './components/Projects';
 function App() {
   return(
@@ -21,6 +22,7 @@ function App() {
       <Route exact path="/projects" component={Blog}/>
       
       </Switch>
+      <Footer/>
       
     </div>
   )

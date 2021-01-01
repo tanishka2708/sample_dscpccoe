@@ -155,16 +155,16 @@ class Navbar extends React.Component {
             toggle = {this.toggleMenu}
             animateButtons = {this.animateButtons}
           />
-        <Link to="/" style={{textDecoration:"none"}}>
+        
           <div className=" pl-5 pt-1 text-secondary" style={{display:"flex", flexDirection:"row"}}>
-            <img src={Image} className="mt-2" style={{width:"250px"}} alt="img"/>
+          <Link to="/" style={{textDecoration:"none"}}><img src={Image} className="mt-2" style={{maxWidth:"220px"}} alt="img"/></Link>
           <div className="mx-3 mt-4 ">
           
           
           </div>
             
           </div>
-          </Link>
+          
           </div>
       )}
 }

@@ -7,7 +7,7 @@ function Home(props) {
         <div>
             <Header/>
             
-            
+            <Footer/>
         </div>
     )
 }

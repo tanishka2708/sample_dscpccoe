@@ -83,11 +83,10 @@
     margin-top: -9em;
   }
   .social-links{
-    transition: 1s ease-in-out !important;
+    transition: 1s ease-in-out;
   }
 .social-links :hover{
-  color: #b3b3b3;
-  
+  color: #007bff;
 }
   .typewriter h1 {
     color: black;
@@ -140,8 +139,8 @@
     z-index: 2000;
     margin-top: 0.8em;
     
-    height: 3.7em;
-    width: 3.7em;
+    height: 4em;
+    width: 4em;
     border-radius: 50%;
     background-color:#6c757d;
     border: 1px solid black;

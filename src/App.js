@@ -9,7 +9,6 @@ import About from './components/AboutUs';
 import Team from './components/Team';
 import Home from './components/Home';
 import Blog from './components/main';
-import Footer from './components/Footer';
 import Projects from './components/Projects';
 import Events from './components/Events';
 
@@ -24,7 +23,6 @@ function App() {
       <Route exact path="/projects" component={Blog}/>
       <Route exact path="/events" component = {Events}/>
       </Switch>
-      <Footer/>
       
     </div>
   )

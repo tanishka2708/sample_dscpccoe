@@ -1,5 +1,4 @@
 import React from 'react'
-import ParallaxCard from 'react-parallax-card'
 import '../css/style.css';
 
 function Events(){

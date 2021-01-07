@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-
 .container {
   position: relative;
   z-index: 1;
@@ -79,10 +78,8 @@
   position: absolute;
   bottom: 50px;
   display: flex;
-  
 }
 .container .card .sci li {
-  
   list-style: none;
   margin: 0 10px;
   transform: translateY(40px);

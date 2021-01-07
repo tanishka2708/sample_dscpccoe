@@ -5,10 +5,11 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  align-items: center;
 }
 @font-face {
-  font-family: 'Product Sans';
-  src: url('./Product\ Sans\ Regular.ttf');
+  font-family: "Product Sans";
+  src: url("./Product\ Sans\ Regular.ttf");
 }
 
 @media (prefers-reduced-motion: no-preference) {

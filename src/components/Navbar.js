@@ -13,7 +13,7 @@ export const itemClick = (e) => {
       color: "#F4B400",
       icon: "fa-paper-plane",
       content : "Connect",
-      href:"https://dsc.community.dev/pimpri-chinchwad-college-of-engineering/",
+      href:"/connect",
       click: itemClick
     },{
       color: "#DB4437",
@@ -44,6 +44,7 @@ export const itemClick = (e) => {
       color: "#0F9D58",
       icon: "fa-play-circle",
       content : 'Videos',
+      href : "/videos",
       click: itemClick
     },
   ];
@@ -150,7 +151,7 @@ class Navbar extends React.Component {
           
           
           <Menu
-            size={18}
+            size={16}
             items={this.state.menuItems} 
             open={this.state.menuOpen}
             toggle = {this.toggleMenu}

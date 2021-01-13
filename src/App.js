@@ -1,16 +1,15 @@
-// import logo from './logo.svg';
 import React from 'react';
 import './App.css';
 import '../src/css/main.scss';
-import { Route, Switch, Redirect } from "react-router-dom";
-// import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol } from 'mdbreact';
+import { Route, Switch } from "react-router-dom";
 import Navbar from './components/Navbar';
-import About from './components/AboutUs';
+// import About from './components/AboutUs';
 import Team from './components/Team';
 import Home from './components/Home';
 import Blog from './components/main';
 import Footer from './components/Footer';
-import Projects from './components/Projects';
+import Videos from './components/Videos';
+import Connect from './components/Connect';
 import Events from './components/Events';
 
 function App() {
@@ -23,6 +22,8 @@ function App() {
       <Route exact path="/team" component={Team} />
       <Route exact path="/projects" component={Blog}/>
       <Route exact path="/events" component = {Events}/>
+      <Route exact path="/videos" component = {Videos}/>
+      <Route exact path="/connect" component = {Connect}/>
       </Switch>
       <Footer/>
       

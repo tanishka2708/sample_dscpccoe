@@ -5,7 +5,8 @@ function Connect() {
 
     return (
         <div className="">
-        <button type="button" class="btn btn-primary">Button</button>
+        <a type="button" target="
+        _blank" href="https://dsc.community.dev/pimpri-chinchwad-college-of-engineering/" class="btn btn-primary">Join Us</a>
 
 
         </div>)

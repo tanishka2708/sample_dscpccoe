@@ -74,25 +74,46 @@ export const BlogCardDemo = React.memo(function BlogCard() {
   } = useBlogTextInfoContentStyles();
   const shadowStyles = useOverShadowStyles();
   return (
+      <div>
+    
+
     <Card className={cx(styles.root, shadowStyles.root)}>
       <CardMedia
         className={styles.media}
         image={
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png'
+          'https://tse2.mm.bing.net/th?id=OIP.NdYMz_uvezscto_J6xRM2AHaHa&pid=Api&P=0&w=300&h=300'
         }
       />
       <CardContent>
         <TextInfoContent
           classes={contentStyles}
-          overline={'28 MAR 2019'}
-          heading={'What is Git ?'}
+          overline={'10 SEPT 2019'}
+          heading={'Notification App'}
           body={
-            'Git is a distributed version control system. Every dev has a working copy of the code and...'
+            'A Notification App for Computer department of Pimpri chinchwad college of engineering.'
           }
         />
-        <Button className={buttonStyles}>Read more</Button>
+        {/* <Button className={buttonStyles}>Read more</Button> */}
+          <Button  className={buttonStyles} color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>Read more</Button>
+          <Collapse isOpen={isOpen}>
+            <Card>
+              <CardBody >
+              <p className={{contentStyles}}>
+              An android apllication that would enable students to receive notifications about the happenings 
+              in computer department.Students can update/add their achievements in the profile section which can 
+              be viewed on their profile.This would indeed make the process of sending notices easier.'
+              </p>
+
+              </CardBody>
+            </Card>
+          </Collapse>
       </CardContent>
+      
     </Card>
+
+
+    
+    </div>
   );
 });
 
